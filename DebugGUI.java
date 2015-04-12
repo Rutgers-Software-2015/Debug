@@ -267,7 +267,7 @@ public class DebugGUI extends JFrame implements ActionListener{
 	private void sqlMessage(String input)
 	{
 		if(input.toUpperCase().contains("INSERT") || input.toUpperCase().contains("DELETE") || input.toUpperCase().contains("UPDATE") ||
-				input.toUpperCase().contains("DROP") || input.toUpperCase().contains("CREATE")){
+				input.toUpperCase().contains("DROP") || input.toUpperCase().contains("CREATE") || input.toUpperCase().contains("ALTER")){
 		LinkedList l = d.updateGetStrings(input);
 		int rs = (int) l.get(0);
 		String s = (String) l.get(1);
