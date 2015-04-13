@@ -269,7 +269,7 @@ public class DebugGUI extends JFrame implements ActionListener{
 		if(input.toUpperCase().contains("INSERT") || input.toUpperCase().contains("DELETE") || input.toUpperCase().contains("UPDATE") ||
 				input.toUpperCase().contains("DROP") || input.toUpperCase().contains("CREATE") || input.toUpperCase().contains("ALTER")){
 		LinkedList l = d.updateGetStrings(input);
-		int rs = (int) l.get(0);
+		int rs = (Integer) l.get(0);
 		String s = (String) l.get(1);
 		
 		consoleOutput.setText("");
