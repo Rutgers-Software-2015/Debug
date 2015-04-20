@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -63,6 +65,17 @@ public class DebugGUI extends JFrame implements ActionListener{
 	{
 		super();
 		init();
+		
+		addWindowListener(new WindowAdapter() // To open main window again if you hit the corner "X"
+        {
+            @Override
+            public void windowClosing(WindowEvent e)
+            {
+                new LoginWindow();
+                d.disconnect();
+                dispose();
+            }
+        });
 	}
 	
 	public void init()
