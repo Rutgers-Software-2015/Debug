@@ -40,6 +40,14 @@ import java.awt.Font;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
+/**
+ * Direct user interaction with the database.
+ * 
+ * @author Samuel Baysting
+ * @tester Samuel Baysting
+ * @debugger Samuel Baysting
+ * 
+ */
 
 public class DebugGUI extends JFrame implements ActionListener{
 	
